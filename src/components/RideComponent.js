@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import moment from "moment";
 import 'moment-duration-format';
-import { Media } from 'reactstrap';
+
 
 function List(props) {
   const rides = props.RIDES;
