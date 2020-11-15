@@ -23,21 +23,26 @@ body {
   align-items: center
 }
 
-#box {
-background-color : grey;
-padding : 10px;
+.background-red {
+  background-color: red;
+  padding : 10px;
 /*border : 10px solid black;*/
 margin : 10px;
 width : 1000px;
 box-sizing : border-box;
 }
 
+.background-blue {
+  background-color: blue;
+  padding : 10px;
+/*border : 10px solid black;*/
+margin : 10px;
+width : 1000px;
+box-sizing : border-box;
+}
+
+
 #button {
-  
-  /*background-color : grey;*/
-  
-  
-  
   }
 
   textarea{

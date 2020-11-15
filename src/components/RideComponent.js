@@ -33,31 +33,15 @@ function List(props) {
     document.getElementsByTagName("span")[i_button].innerHTML = "Clicked";
   };
 
-  function background_red(i_box){
-    if (rides[i_box].id>2) {
-      document.getElementsByTagName("box")[i_box].style.backgroundColor = "red";
-    } ;
-  };
-  
 
+  
+  const isBackgroundRed = false;
   return (
     <ul>{i_rides.map((i_ride) => 
-      <div >
-        {(rides[i_ride].id>2)? <div id="box" style ={{ backgroundColor : 'red' }}><h2> ride ID = {rides[i_ride].id} <span></span></h2>  price= {price(i_ride)} EUR
-        <button id="button" onClick={() => clicked(i_ride) & alert(message_alert(i_ride)) } >
-        Click
-        </button>
-        <div>
-    </div>
-        </div> : (<div id="box" ><h2> ride ID = {rides[i_ride].id} <span></span></h2> price= {price(i_ride)} EUR
-        <button id="button" onClick={() => clicked(i_ride) & alert(message_alert(i_ride)) }>
-        Click
-        </button>
-        <div>
-    </div>
-        </div>) } 
+      <div className={(rides[i_ride].id>2) ? 'background-red' : 'background-blue'}><h2> ride ID = {rides[i_ride].id} <span></span></h2> price= {price(i_ride)} EUR
+          <button id="button" onClick={() => clicked(i_ride) & alert(message_alert(i_ride)) }>Click
+          </button>
       </div>)}
-      
     </ul>
   );
 }
