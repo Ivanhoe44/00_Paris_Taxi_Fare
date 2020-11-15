@@ -35,15 +35,13 @@ box-sizing : border-box;
 .background-blue {
   background-color: blue;
   padding : 10px;
-/*border : 10px solid black;*/
-margin : 10px;
-width : 1000px;
-box-sizing : border-box;
+  margin : 10px;
+  width : 1000px;
+  box-sizing : border-box;
 }
 
 
-#button {
-  }
+
 
  
 

@@ -32,14 +32,14 @@ function List(props) {
   };
 
 
-  
-  const isBackgroundRed = false;
   return (
     <ul>{i_rides.map((i_ride) => 
-      <div className={(rides[i_ride].id>2) ? 'background-red' : 'background-blue'}><h2> ride ID = {rides[i_ride].id} <span></span></h2> price= {price(i_ride)} EUR
+      <li key={i_ride.id}>
+      <div  className={(i_ride.distance>2) ? 'background-red' : 'background-blue'}><h2> ride ID = {i_ride} <span></span></h2> price= {price(i_ride)} EUR
           <button id="button" onClick={() => clicked(i_ride) & alert(message_alert(i_ride)) }>Click
           </button>
-      </div>)}
+      </div>
+      </li>)}
     </ul>
   );
 }
