@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import moment from "moment";
 import 'moment-duration-format';
 
@@ -26,9 +26,7 @@ function List(props) {
    };
     return 1 + rides[i_ride].distance*2.50+additional_price;
   }
-  
-  
-    
+      
   function clicked(i_button){
     document.getElementsByTagName("span")[i_button].innerHTML = "Clicked";
   };
