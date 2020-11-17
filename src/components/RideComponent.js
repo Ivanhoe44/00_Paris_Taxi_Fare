@@ -2,7 +2,6 @@ import React from "react";
 import moment from "moment";
 import 'moment-duration-format';
 
-
 function List(props) {
   const rides = props.RIDES;
   var i_rides = Array.from({length: rides.length}, (x, i) => i);
@@ -31,18 +30,16 @@ function List(props) {
     document.getElementsByTagName("span")[i_button].innerHTML = "Clicked";
   };
 
-
   return (
     <ul>{i_rides.map((i_ride) => 
-      <li key={i_ride.id}>
-      <div  className={(i_ride.distance>2) ? 'background-red' : 'background-blue'}><h2> ride ID = {i_ride} <span></span></h2> price= {price(i_ride)} EUR
+      <div  className={(rides[i_ride].distance>2) ? 'background-red' : 'background-blue'}><h2> ride ID = {rides[i_ride].id} <span></span></h2> price= {price(i_ride)} EUR
           <button id="button" onClick={() => clicked(i_ride) & alert(message_alert(i_ride)) }>Click
           </button>
-      </div>
-      </li>)}
+      </div>)}
     </ul>
   );
 }
 
 export default List
+
 
